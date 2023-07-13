@@ -1,0 +1,17 @@
+Get the list of all albums:
+SELECT * FROM your_table_name;
+
+Get the list of albums with their total number of tracks
+SELECT album_id, name, total_tracks FROM your_table_name;
+
+Get the list of songs with their corresponding albums
+SELECT song_id, song_name, album_id FROM your_table_name;
+
+Get the list of songs added on a specific date
+SELECT song_id, song_name, song_added FROM your_table_name WHERE song_added = '2023-07-13';
+
+Get the most popular songs
+SELECT song_id, song_name, popularity FROM your_table_name ORDER BY popularity DESC;
+
+Get the number of songs per artist
+SELECT artist_id, COUNT(song_id) AS song_count FROM your_table_name GROUP BY artist_id;
